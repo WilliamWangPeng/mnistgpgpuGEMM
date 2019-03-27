@@ -9,4 +9,5 @@ echo -n "16 200 ">>timeres_nogemv; awk '{last=$5} END{print last}' awkres_nogemv
 echo -n "16 400 ">>timeres_nogemv; awk '{last=$5} END{print last}' awkres_nogemv_bs16_l400 >>timeres_nogemv
 echo -n "16 800 ">>timeres_nogemv; awk '{last=$5} END{print last}' awkres_nogemv_bs16_l800 >>timeres_nogemv
 
-gnuplot -p -e 'set yrange [0:10000000];plot "timeres_nogemv" u 2:($1==1?$3:1/0) w linesp,"timeres_nogemv" u 2:($1==16?$3:1/0) w linesp'
+#gnuplot -p -e 'set yrange [0:10000000];plot "timeres_nogemv" u 2:($1==1?$3:1/0) w linesp,"timeres_nogemv" u 2:($1==16?$3:1/0) w linesp'
+gnuplot -p -e 'set yrange [0:10000000];plot "timeres_nogemv" u 1:($2==100?$3:1/0) w linesp,"timeres_nogemv" u 1:($2==200?$3:1/0) w linesp,"timeres_nogemv" u 1:($2==400?$3:1/0) w linesp,"timeres_nogemv" u 1:($2==800?$3:1/0) w linesp,"timeres_v100" 1:2 w linesp '
