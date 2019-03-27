@@ -25,7 +25,8 @@
 #include <sstream>
 #include <fstream>
 #include <stdlib.h>
-#include <chrono>
+//only for testing in real hardware
+//#include <chrono>
 
 #include <cuda.h> // need CUDA_VERSION
 #include <cudnn_v7.h>
@@ -859,7 +860,7 @@ void printmatrix(int n,int c,int h,int w,value_type * pdata_dev) {
 
         std::cout << "Performing forward propagation ...\n";
 		int idres;
-	  auto t1 = std::chrono::high_resolution_clock::now ();
+//	  auto t1 = std::chrono::high_resolution_clock::now ();
      for(int li=0;li<loopnum;li++) {
         checkCudaErrors( cudaMalloc(&srcData, numCpy*IMAGE_H*IMAGE_W*sizeof(value_type)) );
         checkCudaErrors( cudaMemcpy(srcData, imgData_h,
@@ -923,8 +924,8 @@ void printmatrix(int n,int c,int h,int w,value_type * pdata_dev) {
         checkCudaErrors( cudaFree(srcData) );
 			}
         checkCudaErrors( cudaFree(dstData) );
-			auto t2 = std::chrono::high_resolution_clock::now ();
-				std::cout<<"Iteration time: " << std::chrono::duration_cast < std::chrono::microseconds > (t2 - t1).count () / 1000.0f /loopnum <<" ms"<<std::endl;
+//			auto t2 = std::chrono::high_resolution_clock::now ();
+//				std::cout<<"Iteration time: " << std::chrono::duration_cast < std::chrono::microseconds > (t2 - t1).count () / 1000.0f /loopnum <<" ms"<<std::endl;
         /*std::cout << "Resulting weights from Softmax:" << std::endl;
         printDeviceVector(n*c*h*w, dstData);*/
 
@@ -958,8 +959,10 @@ int main(int argc, char *argv[])
 		srand((unsigned)time(0));
     std::string image_path;
     int i1,i2,i3;
-		int numCpy=256;
-		int loopnum=1000;
+		int numCpy=1;
+		//set this to 1 in gpgpu sim,
+		//1000 in real hardware
+		int loopnum=1;
 
     if (checkCmdLineFlag(argc, (const char **)argv, "help"))
     {

@@ -81,8 +81,10 @@ HOST_COMPILER ?= g++
 NVCC          := $(CUDA_PATH)/bin/nvcc -ccbin $(HOST_COMPILER)
 
 # internal flags
-NVCCFLAGS   := -m${TARGET_SIZE}  -G -Xcompiler -rdynamic
-CCFLAGS     := 
+# for memcheck
+#NVCCFLAGS   := -m${TARGET_SIZE}  -G -Xcompiler -rdynamic
+NVCCFLAGS   := -m${TARGET_SIZE} 
+CCFLAGS     :=  
 LDFLAGS     :=
 
 # build flags
