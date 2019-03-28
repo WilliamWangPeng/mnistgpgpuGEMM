@@ -959,7 +959,8 @@ int main(int argc, char *argv[])
 		srand((unsigned)time(0));
     std::string image_path;
     int i1,i2,i3;
-		int numCpy=1;
+		//modify this to batch size
+		int numCpy=16;
 		//set this to 1 in gpgpu sim,
 		//1000 in real hardware
 		int loopnum=1;
