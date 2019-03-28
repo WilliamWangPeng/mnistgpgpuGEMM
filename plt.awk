@@ -24,8 +24,8 @@ END {
 		getline; assert($1=="gpu_tot_sim_insn"); printf $3;printf " ";
 		getline; assert($1=="gpu_tot_ipc"); printf $3;printf " ";
 		getline; assert($1=="gpu_tot_issued_cta"); printf $3;printf " ";
-		getline; assert($1=="gpu_occupancy"); printf $3;printf " ";
-		getline; assert($1=="gpu_tot_occupancy"); printf $3;printf " ";
+		getline; assert($1=="gpu_occupancy"); printf substr($3,1,length($3)-1);printf " ";
+		getline; assert($1=="gpu_tot_occupancy"); printf substr($31,1,length($3)-1);printf " ";
 		getline; assert($1=="max_total_param_size"); printf $3;printf " ";
 		getline; assert($1=="gpu_stall_dramfull"); printf $3;printf " ";
 		getline; assert($1=="gpu_stall_icnt2sh"); printf $3;printf " ";
