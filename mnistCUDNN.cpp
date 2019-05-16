@@ -965,6 +965,16 @@ int main(int argc, char *argv[])
 		//1000 in real hardware
 		int loopnum=1;
 
+		if(argc!=3) {
+			printf("Usage : mnistCUDNN <batch size> <loop number>\n");
+			exit(1);
+		}
+
+		numCpy=atoi(argv[1]);
+		loopnum=atoi(argv[2]);
+		printf("numCpy is %d\n",numCpy);
+		printf("loopnum is %d\n",loopnum);
+
     if (checkCmdLineFlag(argc, (const char **)argv, "help"))
     {
         displayUsage();
