@@ -974,7 +974,7 @@ int main(int argc, char *argv[])
 		loopnum=atoi(argv[2]);
 		printf("numCpy is %d\n",numCpy);
 		printf("loopnum is %d\n",loopnum);
-
+		argc=1;
     if (checkCmdLineFlag(argc, (const char **)argv, "help"))
     {
         displayUsage();
