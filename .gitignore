@@ -1,0 +1,5 @@
+*.ptx
+*.ptxas
+_cuobjdump_list_ptx_*
+_app_cuda_version_*
+*.o
