@@ -17,6 +17,7 @@ awk '{if($1=="gpu_tot_sim_cycle") {printf $3 " "} else if($1=="L2_BW_total") {pr
 awk '{if($1=="gpu_tot_sim_cycle") {printf $3 " "} else if($1=="L2_BW_total") {print $3}}' xx10_bs256_l200 > bw_bs256_l200
 awk '{if($1=="gpu_tot_sim_cycle") {printf $3 " "} else if($1=="L2_BW_total") {print $3}}' xx10_bs256_l400 > bw_bs256_l400
 awk '{if($1=="gpu_tot_sim_cycle") {printf $3 " "} else if($1=="L2_BW_total") {print $3}}' xx10_bs256_l800 > bw_bs256_l800
+awk '{if($1=="gpu_tot_sim_cycle") {printf $3 " "} else if($1=="L2_BW_total") {print $3}}' xx10_bs256_l1600 > bw_bs256_l1600
 
 ./pltBW4row.plt
 
