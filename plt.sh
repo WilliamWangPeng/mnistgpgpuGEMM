@@ -1,7 +1,7 @@
 
-for bs in 1 16 64 256
+for bs in 1 16 64 256 512
 do 
-	for l in 100 200 400 800
+	for l in 100 200 400 800 1600 3200
 	do
 		grep -v "^GPGPU-Sim\|^[ \t]*$\|L2_BW_total" xx10_bs${bs}_l${l} |awk -f plt.awk  > awkres_bs${bs}_l${l}
 	done

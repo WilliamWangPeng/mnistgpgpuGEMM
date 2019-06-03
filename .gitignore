@@ -3,3 +3,8 @@
 _cuobjdump_list_ptx_*
 _app_cuda_version_*
 *.o
+bwtotal_bs*
+bw_bs*
+awkres*
+xx10*
+
