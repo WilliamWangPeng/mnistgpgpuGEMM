@@ -16,11 +16,12 @@ plot \
 set origin 0.0,0.33
 plot \
     "bw_bs256_l100" u 1:2 w linesp, \
-    "bw_bs256_l200" u 1:2 w linesp, \
     "bw_bs256_l400" u 1:2 w linesp, \
-    "bw_bs256_l800" u 1:2 w linesp, \
     "bw_bs256_l1600" u 1:2 w linesp, \
     "bw_bs256_l3200" u 1:2 w linesp
+
+#    "bw_bs256_l200" u 1:2 w linesp, \
+#    "bw_bs256_l800" u 1:2 w linesp, \
 
 set xlabel "time(ns)"
 set origin 0.0,0.0
