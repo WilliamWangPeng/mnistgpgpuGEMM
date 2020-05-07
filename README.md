@@ -4,7 +4,7 @@
 
 ### Runtime on different batch size and DRAM latency ###
 
-<img src="https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/rt.png">
+<img src="https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/rt.PNG">
 
 If you use this benchmark in your work, please cite:
 
