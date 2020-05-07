@@ -1,10 +1,10 @@
 ### Bandwith on different batch size and DRAM latency ###
 
-<img src=“https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/bw.png”>
+<img src="https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/bw.png">
 
 ### Runtime on different batch size and DRAM latency ###
 
-<img src=“https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/rt.png”>
+<img src="https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/rt.png">
 
 If you use this benchmark in your work, please cite:
 
