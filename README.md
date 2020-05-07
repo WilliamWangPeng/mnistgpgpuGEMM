@@ -1,3 +1,11 @@
+### Bandwith on different batch size and DRAM latency ###
+
+<img src=“https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/bw.png”>
+
+### Runtime on different batch size and DRAM latency ###
+
+<img src=“https://github.com/shengyushen/mnistgpgpuGEMM/blob/master/rt.png”>
+
 If you use this benchmark in your work, please cite:
 
 Jonathan Lew, Deval Shah, Suchita Pati, Shaylin Cattell, Mengchi Zhang, Amruth Sandhupatla, Christopher Ng, Negar Goli, Matthew D Sinclair, Timothy G Rogers, Tor Aamodt, Analyzing Machine Learning Workloads Using a Detailed GPU Simulator, arXiv preprint arXiv:1811.08933, 2018
